@@ -1,11 +1,11 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(counter)
+    basic.showNumber(walk)
 })
-input.onGesture(Gesture.Shake, function () {
-    counter += 1
+let walk = 0
+walk = 0
+basic.forever(function () {
+    if (input.acceleration(Dimension.Strength) > 0) {
+        walk += 1
+        basic.pause(100)
+    }
 })
-input.onButtonPressed(Button.B, function () {
-    counter = 0
-})
-let counter = 0
-counter = 0
