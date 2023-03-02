@@ -15,11 +15,11 @@ run = 0
 basic.forever(function () {
     if (input.acceleration(Dimension.Strength) > 700 && input.acceleration(Dimension.Strength) < 1000) {
         walk += 1
-        basic.pause(900)
+        basic.pause(1000)
     } else {
-        if (input.acceleration(Dimension.Strength) >= 1000 && input.acceleration(Dimension.Strength) < 1300) {
+        if (input.acceleration(Dimension.Strength) > 1000 && input.acceleration(Dimension.Strength) < 1300) {
             run += 1
-            basic.pause(900)
+            basic.pause(1000)
         }
     }
 })
